@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+   
+
+    <!-- link to main style.css -->
+    <link rel="stylesheet" href="../style.css">
+
+
+    <title>contact-section</title>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+
+<!-- header nav -->
+<header>
+
+
+    <div class="nav-container">
+
+
+        <h1><a href="../index.html" class="header-brand-title">BlissScent</a></h1>
+
+
+        <div class="nav-menu">
+
+
+            <ul>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+</header>
+
+
+        <!-- contact us section -->
+        <div class="border-top"></div>
+
+
+        <div class="contact-section">
+
+
+            <form class="contact-section-details-name" action="https://formspree.io/f/mnqkggow" method="POST" >
+            <!-- <form class="contact-section-details-name" onsubmit="sendEmail(); reset(); return false;" > -->
+
+
+                <h1 class="contact-section-title">Contact Us</h1>
+
+                <div class="contact-section-lastname">
+                    <h2>Last Name</h2>
+                    <input id="Lastname-input-box" class="enter-your-last-name input-box" type="text" placeholder="Last Name" name="last name" required>
+                </div>
+
+
+                <div class="contact-section-firstname" >
+                    <h2>First Name</h2>
+                    <input id="Fristname-input-box" class="enter-your-first-name input-box" type="text" placeholder="First Name" name="first name" required>
+                </div>
+
+                <div class="contact-section-email">
+                    <h2>Email</h2>
+                    <input id="Email-input-box" class="enter-your-email input-box" type="email" placeholder="Enter your email address" name="email" required>
+                </div>
+    
+    
+                <div class="contact-section-message">
+                    <h2>Message</h2>
+                    <textarea id="message" class="enter-your-message input-box" rows="4" placeholder="Enter your message" name="message" ></textarea>
+                    <!-- <input class="enter-your-message input-box" type="email" placeholder="" value=""> -->
+                    <button class="contact-us-submit-button" type="submit">Send</button>
+                </div>
+    
+                
+
+            </form>
+
+
+
+
+        </div>
+
+
+
+        <!-- End Page Section -->
+
+        <!-- photo/brand section -->
+        <div class="end-page-section">
+
+
+            <div class="end-page-photo-container">
+                <img class="end-page-photo" src="../Assets/end-page-photo.jpg" alt="perfume bundle">
+            </div>
+    
+            <!-- signup section -->
+            <form action="https://formspree.io/f/mnqkggow" method="POST">
+                <div class="end-page-signup">
+                    <p class="sing-up-newsletter">Sign Up for Newsletter</p>
+                    <input class="enter-your-email-section" type="email" placeholder="Enter your email address" value="" name="email">
+                    <input class="enter-your-email-button" type="submit" value=">">
+                </div>
+            </form>
+    
+            <div class="border-bottom"></div>
+
+
+        </div>
+        
+
+
+
+
+        <!-- Footer Section -->
+    
+        <div class="footer-section">
+
+
+            <div class="social-media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+    
+
+            <div class="copyright">
+                <p class="copyright">&copy; 2023 Copyright BlissScent</p>
+            </div>
+
+
+        </div>
+
+
+        <!-- link javascript -->
+        <!-- <script src="../index.js"></script> -->
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+      <script>
+                    function sendEmail () {
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "Jessian.dev23@gmail.com",
+                    Password : "97195EFC2F6035A742A9624597E5FCE0DFAF",
+                    To : "Jessian.dev23@gmail.com",
+                    From : document.getElementById("Email-input-box").value,
+                    Subject : "New Message Inquiry",
+                    Body : "Name: " + document.getElementById("Lastname-input-box").value
+                    + "<br> Email: " + getElementById("Email-input-box").value
+                    + "<br> Message: " + getElementById("message").value
+                }).then(
+                message => alert("Message sent successfully!")
+                );
+            }
+      </script>
+
+        
+</body>
+</html> 
